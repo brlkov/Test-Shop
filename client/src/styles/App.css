@@ -1,0 +1,192 @@
+#root {
+    background: #ebebeb;
+    font-family: Cochin, sans-serif;
+    font-size: large;
+}
+
+
+.NavBar {
+    height: 100px;
+    background: gray;
+}
+.NavBarTop {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    height: 50px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: gray;
+    z-index: 2;
+}
+.NavBarBottom {
+    top: 100px;
+    position: sticky;
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #cdcdcd;
+    z-index: 1;
+}
+.Nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Nav div {
+    margin-right: 20px;
+}
+
+
+.CountryBar {
+    width: 100vw;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.CoinList {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.CoinItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 280px;
+    flex: 3 calc(100vw/3);
+}
+.CoinCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 230px;
+    height: 230px;
+    border: 1px solid black;
+    border-radius: 20px;
+    transition: 0.3s;
+    background: white;
+}
+.CoinCard:hover {
+    transform: scale(1.15);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+.Btn {
+    background: white;
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 3px 10px;
+    margin: 5px;
+    transition: 0.3s;
+}
+.Btn:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+.ActiveBtn {
+    color: white;
+    background: gray;
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 3px 10px;
+    margin: 5px;
+    transition: 0.3s;
+}
+.Btn_FixedSize {
+    width: 180px;
+    height: 35px;
+}
+.BootstrapBtn {
+    font-family: Cochin, sans-serif;
+    font-size: large;
+    border-radius: 7px;
+    padding: 3px 10px;
+}
+
+
+.AdminPanel {
+    height: calc(75vh - 100px);
+    width: 100vw;
+    margin-top: 25vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.Auth {
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.AuthCard {
+    margin-top: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.AuthForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.AuthForm input {
+    height: 35px;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 7px;
+    margin: 5px;
+    padding: 0 10px;
+}
+.AuthRow {
+    width: 300px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.CoinId {
+    height: calc(95vh - 100px);
+    width: 100vw;
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.CoinIdCard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90vw;
+    height: 75vh;
+    border: 1px solid black;
+    border-radius: 20px;
+    transition: 0.3s;
+    background: white;
+}
+.CoinIdCard img {
+    transition: 0.3s;
+}
+.CoinIdCard img:hover {
+    transform: scale(1.7);
+    transition: 0.3s;
+}
