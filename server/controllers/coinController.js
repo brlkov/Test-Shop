@@ -19,7 +19,7 @@ class coinController {
     }
 
     async getAll(req, res) {
-        const {countryId, page, limit} = req.body
+        const {countryId, page, limit} = req.query;
         const pg = page || 1
         const lim = limit || 15
         let offset = pg * lim - lim

@@ -4,7 +4,7 @@ import CoinList from "../components/CoinList";
 import {observer} from "mobx-react-lite";
 import {Context} from "../index";
 import {fetchCoins, fetchCountries} from "../http/coinAPI";
-// import Pages from "../components/Pages";
+import Pages from "../components/Pages";
 
 const Shop = observer(() => {
 
@@ -12,24 +12,24 @@ const Shop = observer(() => {
 
     useEffect(() => {
         fetchCountries().then(data => coin.setCountries(data))
-        fetchCoins().then(data => {
+        fetchCoins(undefined, 1,9).then(data => {
             coin.setCoins(data.rows)
             coin.setCoinsCount(data.count)
             })
-    })
+    } , [])
 
-    // useEffect(() => {
-    //     fetchCoins(coin.selectedCountry.id, coin.page,9).then(data => {
-    //         coin.setCoins(data.rows)
-    //         coin.setCoinsCount(data.count)
-    //     })
-    // }, [coin.page, coin.selectedCountry])
+    useEffect(() => {
+        fetchCoins(coin.selectedCountry.id, coin.page,9).then(data => {
+            coin.setCoins(data.rows)
+            coin.setCoinsCount(data.count)
+        })
+    }, [coin.page, coin.selectedCountry])
 
     return (
-        <div>
+        <div className="Shop">
             <CountryBar/>
             <CoinList/>
-            {/*<Pages/>*/}
+            <Pages/>
         </div>
     );
 });

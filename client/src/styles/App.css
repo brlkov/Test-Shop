@@ -42,6 +42,11 @@
 }
 
 
+.Shop {
+    min-height: calc(100vh - 115px);
+}
+
+
 .CountryBar {
     width: 100vw;
     margin-top: 15px;
@@ -189,4 +194,11 @@
 .CoinIdCard img:hover {
     transform: scale(1.7);
     transition: 0.3s;
+}
+
+
+.Pages {
+    margin: 0;
+    padding: 10px 0;
+    justify-content: center;
 }

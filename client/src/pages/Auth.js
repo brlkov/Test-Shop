@@ -40,11 +40,17 @@ const Auth = observer(() => {
         }
     }
 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        await signIn();
+    }
+
+
     return (
         <div className="Auth">
             <div className="AuthCard">
                 <h2>{isLogin ? "Login" : "Registration"}</h2>
-                <form className="AuthForm">
+                <form className="AuthForm" onSubmit={handleSubmit}>
                     <input
                         value={email}
                         onChange={(event) => setEmail(event.target.value)}
@@ -64,7 +70,7 @@ const Auth = observer(() => {
                             :
                             <Link to={LOGIN_ROUTE}>Sign in</Link>
                         }
-                        <Button className="BootstrapBtn" onClick={signIn}>{isLogin ? "Enter" : "Sign up"}</Button>
+                        <Button type="submit" className="BootstrapBtn" onClick={signIn}>{isLogin ? "Enter" : "Sign up"}</Button>
                     </div>
                 </form>
             </div>

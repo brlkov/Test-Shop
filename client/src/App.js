@@ -14,7 +14,8 @@ const App = () => {
             user.setUser(data)
             user.setIsAuth(true)
         })
-    }, )
+        //eslint-disable-next-line
+    }, [])
 
     return (
         <BrowserRouter>
