@@ -27,7 +27,7 @@ const Auth = observer(() => {
                 userData = jwt_decode(data.jwt)
                 console.log(userData)
             } else {
-                const {data} = await axios.post('http://185.20.225.161:3000/api/user/registration', {email, password, role: 'ADMIN'})
+                const {data} = await axios.post('http://185.20.225.161:3000/api/user/registration', {email, password, role: 'USER'})
                 localStorage.setItem('jwt', data.jwt)
                 userData = jwt_decode(data.jwt)
                 console.log(userData)
